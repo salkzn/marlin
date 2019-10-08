@@ -77,7 +77,65 @@ echo $text;
 echo "</br></br>";
 
 ?>
+<?php
 
+//Блок 1
+//Основы работы с массивами на PHP
+/*echo "</br></br>";
+$arr=['a', 'b', 'c'];
+var_dump($arr);
+
+echo "</br></br>";
+echo $arr[0];
+echo $arr[1];
+echo $arr[2];
+
+echo "</br></br>";
+$arr=['a', 'b', 'c', 'd'];
+echo "$arr[0] + $arr[1], $arr[2] + $arr[3]";
+
+echo "</br></br>";
+$arr=[2, 5, 3, 9];
+$result = ($arr[0] * $arr[1]) + ($arr[2] * $arr[3]);
+echo $result;*/
+
+/*echo "</br></br>";
+$arr[] = 1;
+$arr[] = 2;
+$arr[] = 3;
+$arr[] = 4;
+$arr[] = 5;*/
+
+/*echo "</br></br>";
+$arr = ['a'=>1, 'b'=>2, 'c'=>3];
+echo  $arr['c'].'</br>';
+echo  $arr['a'] + $arr['b'] + $arr['c'];*/
+
+/*$arr = ['Коля'=>'1000$', 'Вася'=>'500$', 'Петя'=>'200$'];
+echo  $arr['Петя'].'</br>';
+echo  $arr['Коля'];*/
+
+/*$arr = [1=>'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+echo $arr[1];
+$day = $arr[3];
+echo $day;*/
+
+/*$arr = [
+    'cms'=>['joomla', 'wordpress', 'drupal'],
+    'colors'=>['blue'=>'голубой', 'red'=>'красный', 'green'=>'зеленый']
+];
+echo $arr['cms'][0].', '.$arr['cms'][2].', '.$arr['colors']['green'].', '.$arr['colors']['red'];*/
+
+/*$arr = [
+    'ru'=>[1=>'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+    'en'=>[1=>'mo', 'tu', 'we', 'fe', 'fr', 'sa', 'so']
+];
+$lang = 'ru';
+$day = 4;
+echo $arr[$lang][$day];
+echo $arr['ru'][0].', '.$arr['en'][2];*/
+
+?>
 
 
 
