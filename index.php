@@ -1,142 +1,106 @@
-<?php
-//Блок 1
-//Основы синтаксиса
-//Примеры решения задач
-//Задание 1
-echo "<h4>Примеры решения задач </br>Lesson 1 </h4>";
-$var = "hello";
-echo $var[0];
-echo $var[1];
-echo $var[4];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-//Задание 2
-echo "<h4>Lesson 2 </h4>";
-$second = 60;
-$hours = 2;
-$res = $hours * ($second * 60);
-echo "Количество секунд в $hours часах равна $res";
+    <title>Comments</title>
 
-//Задание 3
-echo "<h4>Lesson 3 </h4>";
-$var = 1;
-$var += 12;
-$var -= 14;
-$var *= 5;
-$var /= 7;
-$var++;
-$var--;
-echo $var;
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-//Задачи для решения
-//echo "</br></br>";
-echo "<h4>Работа с переменными</h4>";
-$a = 3;
-echo "Переменная а равна: $a</br></br>";
+    <!-- Styles -->
+    <link href="css/app.css" rel="stylesheet">
 
-$a = 10;
-$b = 2;
-$resSum = $a + $b;
-$resRazn = $a - $b;
-$resProizv = $a * $b;
-$resDelen = $a / $b;
-echo "Переменная а равна: $a</br>Переменная b равна: $b</br>Их сумма: $resSum</br>Их разность: $resRazn</br>
-Их произведение: $resProizv</br>Их частное: $resDelen";
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    Project
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-echo "</br></br>";
-$c = 15;
-$d = 2;
-$result = $c + $d;
-echo $result;
-echo "</br></br>";
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
 
-$a=10;
-$b=2;
-$c=5;
-echo $a + $b + $c;
-echo "</br></br>";
+                    </ul>
 
-$a=17;
-$b=2;
-$c= $a - $b;
-$d = 7;
-$result = $c + $d;
-echo $result;
-echo "</br></br>";
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.html">Register</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-$text = 'Я';
-$text = $text.' хочу';
-$text = $text.' знать';
-$text = $text.' PHP!';
-echo $text;
-?>
+        <main class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header"><h3>Комментарии</h3></div>
 
-<?php
+                            <div class="card-body">
+                              <div class="alert alert-success" role="alert">
+                                Комментарий успешно добавлен
+                              </div>
 
-//Блок 1
-//Основы работы с массивами на PHP
-echo "</br></br>";
+                                <div class="media">
+                                    <?php
+                                    $media = [
+                                            ['username' => 'Вася Пупкин', 'date' => '12/10/2025', 'comment' => 'lorem lorem lorem'],
+                                            ['username' => 'Саша Петров', 'date' => '12/10/2025', 'comment' => 'lorem lorem lorem'],
+                                            ['username' => 'Коля Сидоров', 'date' => '12/10/2025', 'comment' => 'lorem lorem lorem']
+                                    ];?>
+                                    <?php foreach ($media as $key =>  $users) { ?>
+                                  <img src="img/no-user.jpg" class="mr-3" alt="..." width="64" height="64">
+                                  <div class="media-body">
+                                    <h5 class="mt-0"><?php echo $users['username']; ?> </h5>
+                                    <span><small><?php echo $users['date']; ?></small></span>
+                                    <p>
+                                        <?php echo $users['comment']; ?>
+                                    </p>
+                                  </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-12" style="margin-top: 20px;">
+                        <div class="card">
+                            <div class="card-header"><h3>Оставить комментарий</h3></div>
 
-?>
-<?php
-
-//Блок 1
-//Основы работы с массивами на PHP
-/*echo "</br></br>";
-$arr=['a', 'b', 'c'];
-var_dump($arr);
-
-echo "</br></br>";
-echo $arr[0];
-echo $arr[1];
-echo $arr[2];
-
-echo "</br></br>";
-$arr=['a', 'b', 'c', 'd'];
-echo "$arr[0] + $arr[1], $arr[2] + $arr[3]";
-
-echo "</br></br>";
-$arr=[2, 5, 3, 9];
-$result = ($arr[0] * $arr[1]) + ($arr[2] * $arr[3]);
-echo $result;*/
-
-/*echo "</br></br>";
-$arr[] = 1;
-$arr[] = 2;
-$arr[] = 3;
-$arr[] = 4;
-$arr[] = 5;*/
-
-/*echo "</br></br>";
-$arr = ['a'=>1, 'b'=>2, 'c'=>3];
-echo  $arr['c'].'</br>';
-echo  $arr['a'] + $arr['b'] + $arr['c'];*/
-
-/*$arr = ['Коля'=>'1000$', 'Вася'=>'500$', 'Петя'=>'200$'];
-echo  $arr['Петя'].'</br>';
-echo  $arr['Коля'];*/
-
-/*$arr = [1=>'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-echo $arr[1];
-$day = $arr[3];
-echo $day;*/
-
-/*$arr = [
-    'cms'=>['joomla', 'wordpress', 'drupal'],
-    'colors'=>['blue'=>'голубой', 'red'=>'красный', 'green'=>'зеленый']
-];
-echo $arr['cms'][0].', '.$arr['cms'][2].', '.$arr['colors']['green'].', '.$arr['colors']['red'];*/
-
-/*$arr = [
-    'ru'=>[1=>'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
-    'en'=>[1=>'mo', 'tu', 'we', 'fe', 'fr', 'sa', 'so']
-];
-$lang = 'ru';
-$day = 4;
-echo $arr[$lang][$day];
-echo $arr['ru'][0].', '.$arr['en'][2];*/
-
-?>
-
-
-
-
+                            <div class="card-body">
+                                <form action="/store" method="post">
+                                    <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Имя</label>
+                                    <input name="name" class="form-control" id="exampleFormControlTextarea1" />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Сообщение</label>
+                                    <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                  <button type="submit" class="btn btn-success">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
